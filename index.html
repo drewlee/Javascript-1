@@ -22,20 +22,20 @@
     <!-- Form to get user input -->
     <form id="dino-compare">
         <div class="form-container">
-            <p>Name:</p>
-            <input id="name" class="form-field__full" type="name" name="name">
-            <p>Height</p>
-            <label>Feet: <input id="feet" class="form-field__short" type="number" name="feet"></label>
-            <label>inches: <input id="inches" class="form-field__short" type="number" name="inches"></label>
-            <p>Weight:</p>
-            <label><input id="weight" class="form-field__full" type="number" name="weight">lbs</label>
-            <p>Diet:</p>
-            <select id="diet" class="form-field__full" name="diet">
+            <p id="name-label">Name:</p>
+            <input id="name" class="form-field__full" type="text" name="name" aria-labelledby="name-label" required>
+            <p id="height-label">Height</p>
+            <label>Feet: <input id="feet" class="form-field__short" type="number" name="feet" aria-describedby="height-label" required></label>
+            <label>inches: <input id="inches" class="form-field__short" type="number" name="inches" aria-describedby="height-label" required></label>
+            <p id="weight-label">Weight (lbs):</p>
+            <input id="weight" class="form-field__full" type="number" name="weight" aria-labelledby="weight-label" required>
+            <p id="diet-label">Diet:</p>
+            <select id="diet" class="form-field__full" name="diet" aria-labelledby="diet-label">
                 <option>Herbavor</option>
                 <option>Omnivor</option>
                 <option>Carnivor</option>
             </select>
-            <div id="btn">Compare Me!</div>
+            <button type="submit" id="btn">Compare Me!</button>
         </div>
     </form>
     <!-- .grid to attach tiles to -->
