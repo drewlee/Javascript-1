@@ -234,4 +234,4 @@ const app = (function() {
     return { init };
 })();
 
-app.init();
+window.addEventListener('DOMContentLoaded', app.init);
